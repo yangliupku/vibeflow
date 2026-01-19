@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0a0a0b;
+  --color-surface: #141416;
+  --color-border: #27272a;
+  --color-text-primary: #fafafa;
+  --color-text-secondary: #a1a1aa;
+  --color-accent: #3b82f6;
+  --font-family-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+  --radius-sm: 2px;
+  --radius: 4px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #0a0a0b;
+  color: #fafafa;
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+}
+
+::selection {
+  background-color: #3b82f6;
+  color: #fafafa;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #141416;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #52525b;
+}
+
+.fc {
+  --fc-border-color: #27272a;
+  --fc-button-bg-color: #141416;
+  --fc-button-border-color: #27272a;
+  --fc-button-text-color: #fafafa;
+  --fc-button-hover-bg-color: #1f1f23;
+  --fc-button-hover-border-color: #3b82f6;
+  --fc-button-active-bg-color: #3b82f6;
+  --fc-button-active-border-color: #3b82f6;
+  --fc-event-bg-color: #3b82f6;
+  --fc-event-border-color: #3b82f6;
+  --fc-today-bg-color: rgba(59, 130, 246, 0.1);
+  --fc-page-bg-color: #0a0a0b;
+  --fc-neutral-bg-color: #141416;
+  --fc-list-event-hover-bg-color: #1f1f23;
+}
+
+.fc .fc-daygrid-day-number,
+.fc .fc-col-header-cell-cushion {
+  color: #a1a1aa;
+}
+
+.fc .fc-daygrid-day.fc-day-today .fc-daygrid-day-number {
+  color: #3b82f6;
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+  border-color: #27272a;
+}
+
+.fc .fc-timegrid-slot {
+  height: 2.5em;
+}
+
+.fc .fc-timegrid-slot-label {
+  color: #52525b;
+  font-size: 0.75rem;
+}
